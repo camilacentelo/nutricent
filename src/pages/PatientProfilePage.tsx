@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
-  ChevronLeft, User, Calendar, Target, Activity, 
+  ChevronLeft, User, Activity, 
   Save, CheckCircle2, Plus, Clipboard, Coffee,
   TrendingUp, FileText, ChevronRight
 } from 'lucide-react';

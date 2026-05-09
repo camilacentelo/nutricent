@@ -43,13 +43,6 @@ const DashboardPage: React.FC = () => {
         endOfWeek.setDate(startOfWeek.getDate() + 6);
         endOfWeek.setHours(23, 59, 59, 999);
 
-        const { count: consultationsCount, error: cError } = await supabase
-          .from('consultas')
-          .select('id, paciente_id(nutricionista_id)', { count: 'exact', head: true })
-          .eq('paciente_id.nutricionista_id', user.id)
-          .gte('data_consulta', startOfWeek.toISOString())
-          .lte('data_consulta', endOfWeek.toISOString());
-
         // Note: The filter above on join might be tricky in Supabase depending on the version.
         // Alternative: Fetch patients for this nutri, then consultations for those patients.
         

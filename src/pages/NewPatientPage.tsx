@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   User, Clipboard, Coffee, Save, ChevronLeft, 
-  CheckCircle2, Loader2, Plus, X 
+  CheckCircle2, Loader2 
 } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
 import { useAuth } from '../contexts/AuthContext';
